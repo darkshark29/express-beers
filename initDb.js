@@ -13,7 +13,7 @@ async function init (){
 		const db = client.db(dbName);
 		await  db.collection(collectionName).drop();
 		const collection = db.collection(collectionName);
-		let jsonBeers = JSON.parse(jsonData);
+		let jsonBeers = JSON.parse(jsonData.toString());
 	
 		jsonBeers.forEach(beer => {
 			console.log('=> Adding ' + beer.name);
