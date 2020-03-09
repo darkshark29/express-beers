@@ -3,7 +3,7 @@ async function init (){
 	var MongoClient = require('mongodb').MongoClient;
 	var collectionName = 'beers';
 	const fs = require('fs');
-	const jsonData = require('app/beers/beers.json');
+	const jsonData = require('./app/beers/beers.json');
 	var url = process.env.MONGODB_ADDON_URI;
 	var dbName = process.env.MONGODB_ADDON_DB || 'beers';
 	
