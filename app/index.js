@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var assert = require('assert');
 var MongoClient = require('mongodb').MongoClient;
+var collectionName = 'beers'
 
 
 app.get('/beers', async function (req, res) {
