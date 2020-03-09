@@ -3,6 +3,8 @@ var MongoClient = require('mongodb').MongoClient;
 var collectionName = 'beers';
 const fs = require('fs');
 const jsonData = require('beers/beers.json');
+var url = process.env.MONGODB_ADDON_URI;
+var dbName = process.env.MONGODB_ADDON_DB || 'beers';
 
 let client;
 try {
