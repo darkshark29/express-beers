@@ -17,7 +17,7 @@ async function init (){
 	
 		jsonBeers.forEach(beer => {
 			console.log('=> Adding ' + beer.name);
-			await collection.insertOne(beer);
+			collection.insertOne(beer);
 		});
 	} catch(err) {
 		console.log(err.stack);
