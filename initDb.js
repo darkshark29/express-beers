@@ -15,9 +15,8 @@ async function init (){
 		// 	await  db.collection(collectionName).drop();
 		// }
 		const collection = db.collection(collectionName);
-		let jsonBeers = JSON.parse(jsonData);
 	
-		jsonBeers.beers.forEach(beer => {
+		jsonData.beers.forEach(beer => {
 			console.log('=> Adding ' + beer.name);
 			collection.insertOne(beer);
 		});
